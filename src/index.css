@@ -1,6 +1,9 @@
 
 
 .face-img{
-
     width: 40px;
+}
+
+.ham{
+    display: flex;
 }

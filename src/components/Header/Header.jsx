@@ -34,9 +34,9 @@ const Header = () => {
 
 const navLinks = navItems.map((item, index) => {
     return (
-      <li className="nav-item" key={index}>
+      <li className="sm:m-2" key={index}>
         <a
-          className="lg:text-xl md:text-base text-slate-200 hover:text-yellow-300 hover:underline" 
+          className="lg:text-xl md:text-base sm:text-xl text-slate-200 hover:text-yellow-300 hover:underline" 
           href={`#${item.toLowerCase()}`}
           onClick={(e) => scrollToSection(e, item.toLowerCase())}
         >
@@ -47,14 +47,14 @@ const navLinks = navItems.map((item, index) => {
   })
 
   const socials = (
-    <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-12 mb-2 items-center">
       <a 
                   href="https://www.linkedin.com/in/ashutosh-bhujbal/" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="text-2xl mr-4"
                   >
-                  <img src={linkedin} alt="LinkedIn" className="w-6" />
+                  <img src={linkedin} alt="LinkedIn" className="w-8" />
                 </a>
 
               <a 
@@ -63,7 +63,7 @@ const navLinks = navItems.map((item, index) => {
                 rel="noreferrer"
                 className="text-2xl mr-4"
               >
-                <img src={git} alt="Github" className="w-6" />
+                <img src={git} alt="Github" className="w-8" />
               </a>
     </div>
   )
@@ -83,7 +83,7 @@ const navLinks = navItems.map((item, index) => {
     <header 
       className="fixed top-0 left-0 w-full z-50 bg-stone-900 border-b border-slate-500"
     >
-      <nav className="flex justify-around items-center p-3">
+      <nav className="flex justify-around justify-between items-center p-3">
         <div className="flex items-center gap-6">
           <img 
           src={face} 
@@ -126,7 +126,7 @@ const navLinks = navItems.map((item, index) => {
                 {navLinks}
               </ul>
           ) : (
-          <div className="flex items-center cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+          <div className="flex items-center cursor-pointer ham" onClick={() => setIsOpen(!isOpen)}>
                   {
                     !isOpen ? 
                     <img src={ham} alt="menu" className="w-8" /> 
@@ -134,7 +134,7 @@ const navLinks = navItems.map((item, index) => {
                       <>
                         <img src={close} alt="menu" className="w-6" />
                         <div className="">
-                          <ul className="flex flex-col gap-y-4 bg-stone-800 px-12 py-6 rounded-xl absolute z-50 top-12 right-20">
+                          <ul className="w-80 flex flex-col items-center gap-y-8 bg-stone-800 px-2 py-6 rounded-xl absolute z-50 top-12 right-10">
                             {socials}
                             {navLinks}
                           </ul>

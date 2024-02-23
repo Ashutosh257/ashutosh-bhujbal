@@ -20,7 +20,7 @@ const Footer = () => {
               <img src={git} alt="Github" className="w-6" />
             </a>
             
-            <a href="" target="_blank" rel="noreferrer" className="text-2xl mr-4">
+            <a href="https://www.instagram.com/ashutosh_257/" target="_blank" rel="noreferrer" className="text-2xl mr-4">
               <img src={insta} alt="Instagram" className="w-6" />
             </a>
           </div>

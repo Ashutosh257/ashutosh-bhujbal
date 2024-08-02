@@ -48,7 +48,7 @@ const Projects = () => {
 
                             <div className="flex justify-around mt-2">
                                 <a 
-                                    href={project.demo} 
+                                    href={project.github} 
                                     target="_blank" 
                                     rel="noreferrer" 
                                     className="text-blue-600 hover:underline"
